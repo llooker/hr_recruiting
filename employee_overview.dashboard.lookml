@@ -529,32 +529,32 @@
     width: 7
     height: 2
   filters:
-  - name: Department Name
-    title: Department Name
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    ui_config:
-      type: checkboxes
-      display: popover
-    model: hr_recruiting
-    explore: employee_data
-    listens_to_filters: []
-    field: posting_department_mapping.department_name
-  - name: Most Recent Rating
-    title: Most Recent Rating
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    ui_config:
-      type: checkboxes
-      display: popover
-    model: hr_recruiting
-    explore: employee_data
-    listens_to_filters: []
-    field: employees.most_recent_performance_review
+  # - name: Department Name
+  #   title: Department Name
+  #   type: field_filter
+  #   default_value: ''
+  #   allow_multiple_values: true
+  #   required: false
+  #   ui_config:
+  #     type: checkboxes
+  #     display: popover
+  #   model: hr_recruiting
+  #   explore: employee_data
+  #   listens_to_filters: []
+  #   field: posting_department_mapping.department_name
+  # - name: Most Recent Rating
+  #   title: Most Recent Rating
+  #   type: field_filter
+  #   default_value: ''
+  #   allow_multiple_values: true
+  #   required: false
+  #   ui_config:
+  #     type: checkboxes
+  #     display: popover
+  #   model: hr_recruiting
+  #   explore: employee_data
+  #   listens_to_filters: []
+  #   field: employees.most_recent_performance_review
   - name: Location
     title: Location
     type: field_filter

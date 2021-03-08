@@ -346,25 +346,25 @@ view: salary_over_time {
 ## but, we'll throw in a date_sub in the middle. We're subtracting the date interval from the date_trunc to generate the previous timeframe. Doing the inverse
 ## for the next timeframe
 
-  dimension: prev_timeframe {
-    hidden: yes
-    type: date
-    datatype: timestamp
-    sql: TIMESTAMP(DATE_TRUNC(
-                  DATE_SUB(${date}, INTERVAL 1 {% parameter timeframe_selector %})
-                  , {% parameter timeframe_selector %}
-                  )) ;;
-  }
+  # dimension: prev_timeframe {
+  #   hidden: yes
+  #   type: date
+  #   datatype: timestamp
+  #   sql: TIMESTAMP(DATE_TRUNC(
+  #                 DATE_SUB(${date}, INTERVAL 1 {% parameter timeframe_selector %})
+  #                 , {% parameter timeframe_selector %}
+  #                 )) ;;
+  # }
 
-  dimension: next_timeframe {
-    hidden: yes
-    type: date
-    datatype: timestamp
-    sql: TIMESTAMP(DATE_TRUNC(
-                  DATE_ADD(${date}, INTERVAL 1 {% parameter timeframe_selector %})
-                  , {% parameter timeframe_selector %}
-                  )) ;;
-  }
+  # dimension: next_timeframe {
+  #   hidden: yes
+  #   type: date
+  #   datatype: timestamp
+  #   sql: TIMESTAMP(DATE_TRUNC(
+  #                 DATE_ADD(${date}, INTERVAL 1 {% parameter timeframe_selector %})
+  #                 , {% parameter timeframe_selector %}
+  #                 )) ;;
+  # }
 
   measure: count {
     hidden: yes
